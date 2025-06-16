@@ -9,7 +9,7 @@ body{
         left: 0px;
         width: 100%;
         height: 50px;
-        background: rgba(240, 240, 240, 0.7);
+        background: rgba(240, 240, 240, 0.9);
         display: flex;
         z-index: 90000;
 
@@ -25,6 +25,17 @@ body{
             div{
                 display: none;
             }
+            .nav_whatsapp{
+                height: 100%;
+                padding: 12px;
+                position: absolute;
+                right: 10px;
+                top: 0px;
+
+                svg{
+                    height: 100%;
+                }
+            }
             ul{
                 height: 100%;
                 display: flex;
@@ -37,7 +48,7 @@ body{
                     a{
                         font-family: "Sansation", sans-serif;
                         font-weight: 600;
-                        font-size: 18px;
+                        font-size: 16px;
                         color: #13130f;
                         text-decoration: none;
                         position: relative;
@@ -60,10 +71,79 @@ body{
             }
         }
         @media only screen and (max-width: 600px){
+            .nav_logo_noResponsive{
+                display: none;
+            }
+            .nav_whatsapp{
+                display: none;
+            }
+            div{
+                width: 100%;
+                height: 100%;
+                background: #f0f0f0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 50;
+                
+                img{
+                    height: 100%;
+                    padding: 5px;
+                }
+            }
+            .nav_b_dropDown{
+                position: absolute;
+                left: 10px;
+                top: 7px;
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+                border: none;
+                outline: none;
+                padding: 3px;
+                border-radius: 5px;
+                background-color: #338bc5;
+                z-index: 100;
+
+                svg{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .nav_b_dropDown:hover{
+                background-color: #5197c5;
+            }
             ul{
+                width: 100%;
+                height: auto;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0px;
+                z-index: 20;
+                overflow: hidden;
+                background-color: #13130f;
+                transition: height 0.2s;
 
                 li{
+                    width: 100%;
+                    border-top: 1px solid #000000;
 
+                    a{
+                        padding: 20px;
+                        text-decoration: none;
+                        font-size: 18px;
+                        font-family: "Sansation", sans-serif;
+                        color: #fff;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    a:hover{
+                        background-color: #1f1f19;
+                    }
                 }
             }
         }
